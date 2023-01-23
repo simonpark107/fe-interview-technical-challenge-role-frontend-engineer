@@ -7,10 +7,10 @@ import { newPolicyholder } from '../../constants/newPolicyholder';
 import { Rows } from './types/types';
 
 function PolicyholdersView() {
-  const { data, isLoading, isError, isFetching } = usePolicyholders();
+  const { data, isLoading, isError } = usePolicyholders();
   const { mutate } = useCreatePolicyholder();
 
-  if (isLoading || isFetching) {
+  if (isLoading) {
     return (
       <div>
         <HourglassBottom />
@@ -65,3 +65,18 @@ function PolicyholdersView() {
 }
 
 export default PolicyholdersView;
+
+// TODO:
+// Better loading & error handling for better user experience
+// Handle if there are 0 policyholders
+// Disable "Add a policyholder" button or show a message if you can't add anymore policyholders
+// Implement infinite scroll (useInfiniteQuery) or pagination if able to write to database
+// Implement optimistic update
+// Should be able to delete & update a policyholder
+// Create a succeess, loading, and error message for creating, updating, and deleting a policyholder
+// Create search input to filter policyholders by their key/value
+// Create a modal form to create & update policyholders and use form validation.
+// Create a confirmation message (toast) when deleting a policyholder
+// Create a way to delete multiple policyholders
+// Add more testing for PolicyholdersView, useQuery, and useMutation.
+// Mobile responsiveness
