@@ -9,10 +9,11 @@ import {
   BoxProps,
   Box,
 } from '@mui/material';
+import { Rows } from '../PolicyholdersView/types/types';
 
 type TInfoTable = {
   header: string;
-  rows: { key: string; value: string | number }[];
+  rows: Rows;
 } & BoxProps;
 
 function InfoTable({ header, rows, ...boxProps }: TInfoTable) {
