@@ -5,7 +5,7 @@ import { rest } from 'msw';
 import { server } from '../../mocks/server';
 
 describe('PolicyholdersView', () => {
-  it('Renders Error icon when server response with error', async () => {
+  it('Renders Error icon when server responds with an error', async () => {
     server.use(
       rest.get(
         'https://fe-interview-technical-challenge-api-git-main-sure.vercel.app/api/policyholders',
