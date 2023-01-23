@@ -1,5 +1,6 @@
 import { Link, Box } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+
 type TNavBar = {
   links: {
     text: string;
@@ -9,6 +10,8 @@ type TNavBar = {
 };
 
 function NavBar({ links }: TNavBar) {
+  const location = useLocation();
+
   return (
     <Box
       component="aside"
@@ -41,8 +44,14 @@ function NavBar({ links }: TNavBar) {
             '&:not(:last-of-type)': {
               marginBottom: '16px',
             },
+            '&[aria-current="page"]': {
+              background: '#1f55e7',
+              padding: '5px',
+              borderRadius: '3px',
+            },
           }}
           data-testid={dataTestId}
+          aria-current={location.pathname === href ? 'page' : false}
         >
           {text}
         </Link>
