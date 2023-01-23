@@ -73,10 +73,10 @@ export default PolicyholdersView;
 // Implement infinite scroll (useInfiniteQuery) or pagination if able to write to database
 // Implement optimistic update
 // Should be able to delete & update a policyholder
-// Create a succeess, loading, and error message for creating, updating, and deleting a policyholder
+// Create a success, loading, and error message for creating, updating, and deleting a policyholder
 // Create search input to filter policyholders by their key/value
-// Create a modal form to create & update policyholders and use form validation.
-// Create a confirmation message (toast) when deleting a policyholder
+// Create a modal form to create & update policyholders and use form validation
+// Create a confirmation dialog when deleting a policyholder
 // Create a way to delete multiple policyholders
-// Add more testing for PolicyholdersView, useQuery, and useMutation.
+// Add more testing for PolicyholdersView, useQuery, and useMutation
 // Mobile responsiveness
